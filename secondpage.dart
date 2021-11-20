@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:untitled/thirdpage.dart';
 
 class SecondPage extends StatefulWidget {
   const SecondPage({Key? key}) : super(key: key);
@@ -27,7 +28,7 @@ class _SecondPageState extends State<SecondPage> {
         margin: EdgeInsets.only(top: 30),
         child: TextField(
           decoration: InputDecoration(
-              border: OutlineInputBorder(
+              enabledBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.white,width: 2.0),
                   borderRadius: BorderRadius.circular(25)),
               labelText: 'Prefilled text field',
               labelStyle: TextStyle(color: Colors.white)),
@@ -39,7 +40,7 @@ class _SecondPageState extends State<SecondPage> {
                 margin: EdgeInsets.only(top: 30),
                 child: TextField(
                   decoration: InputDecoration(
-                      border: OutlineInputBorder(
+                      enabledBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.white,width: 2.0),
                           borderRadius: BorderRadius.circular(25)),
                       labelText: 'Prefilled text select',
                       labelStyle: TextStyle(color: Colors.white)),
@@ -49,10 +50,10 @@ class _SecondPageState extends State<SecondPage> {
 
               // Container(margin: EdgeInsets.only(top: 30),child: return Checkbox(checkColor: ,),)
 
-              Container(margin: EdgeInsets.only(left: 10, top: 20),
+              Container(margin: EdgeInsets.only(left: 10, top: 40),
                 child: ElevatedButton(
                   onPressed: () {
-                    Navigator.of(context).push(MaterialPageRoute(builder: (context)=>SecondPage()));
+                    Navigator.of(context).push(MaterialPageRoute(builder: (context)=>ThirdPage()));
                   },
                   child: const Text(
                     'SUBMIT',
@@ -61,20 +62,16 @@ class _SecondPageState extends State<SecondPage> {
                         fontWeight: FontWeight.w900,
                         fontSize: 17),
                   ),
-                  style: ElevatedButton.styleFrom(
+                  style: ElevatedButton.styleFrom(shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(30)),
                     fixedSize: Size(320, 35),
                     primary: Colors.white,
-                    // shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                    //         RoundedRectangleBorder(
-                    //   borderRadius: BorderRadius.circular(25),
-                    // ))),
                   ),
                 ),),
 
               Container(margin: EdgeInsets.only(left: 10, top: 20),
                 child: ElevatedButton(
                   onPressed: () {
-                    Navigator.of(context).push(MaterialPageRoute(builder: (context)=>SecondPage()));
+                    // Navigator.of(context).push(MaterialPageRoute(builder: (context)=>SecondPage()));
                   },
                   child: const Text(
                     'CLEAR',
@@ -83,7 +80,7 @@ class _SecondPageState extends State<SecondPage> {
                         fontWeight: FontWeight.w900,
                         fontSize: 17),
                   ),
-                  style: ElevatedButton.styleFrom(
+                  style: ElevatedButton.styleFrom(shape: RoundedRectangleBorder(borderRadius: new BorderRadius.circular(30)),
                     fixedSize: Size(320, 35),
                     primary: Colors.white,
                     // shape: MaterialStateProperty.all<RoundedRectangleBorder>(
